@@ -28,20 +28,29 @@
 }
 
 .footer {
+    display: flex;
+}
 
-}  
 .footer-nav {
-
+    display: flex;
 } 
 .footer-nav-container {
-
+    display: flex;
 } 
 .footer-nav__link-list {
-
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 } 
 .footer-nav__link-item {
 
+}
+.footer-nav__link {
+    display: flex;
+    width: 1.5rem;
 } 
 .footer-nav__link-image {
-
+    width: 100%;
 } 
