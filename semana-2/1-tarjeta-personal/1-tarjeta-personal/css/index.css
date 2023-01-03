@@ -53,7 +53,12 @@
 .footer-nav__link {
     display: flex;
     width: 1.75rem;
+    transition: all 0.25s;
 } 
+.footer-nav__link:hover {
+    filter: brightness(150%);
+    transform: scale(1.25);
+}
 .footer-nav__link-image {
     width: 100%;
 } 
@@ -95,4 +100,9 @@
     text-align: center;
     margin: 0;     
 }
-
+.article__card-description::before{
+    content: '📚' ;
+}
+.article__card-description::after{
+    content: '📚' ;
+}
