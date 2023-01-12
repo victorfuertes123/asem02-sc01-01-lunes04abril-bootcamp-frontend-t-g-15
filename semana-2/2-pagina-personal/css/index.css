@@ -20,3 +20,43 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin: 0;
 }
+
+
+.header {
+    
+}
+.header-nav {
+    padding: 0.5rem 0;
+
+}
+.heder-nav__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--padding-container);
+}
+.header-nav__link-logo-container {
+    display: flex;
+    height: 3rem;
+    border-radius: 50%;
+    overflow: hidden;
+
+}
+.header-nav__link-logo {
+    height: 100%;
+
+}
+.header-nav__menu-link-list {
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.header-nav__menu-link-item {
+    display: flex;
+}
+.header-nav__menu-link {
+    color: var(--text-color);
+    text-decoration: none;
+}
