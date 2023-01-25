@@ -90,7 +90,7 @@
     top: 4rem;
     left: 100%;
     width: 100vw;
-    height: 100vh;
+    height: calc(100% - 4rem);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -113,7 +113,8 @@
     transition: var(--all-transitions);
 }
 
-.header-nav__menu-link:hover {
+.header-nav__menu-link:hover,
+.header-nav__menu-link--active {
     color: var(--primary-highlight);
 }
 
@@ -128,6 +129,7 @@
     transition: var(--all-transition);
 }
 
-.header-nav__menu-link:hover::after {
+.header-nav__menu-link:hover::after,
+.header-nav__menu-link--active::after {
     width: 100%;
 }
