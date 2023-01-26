@@ -1,15 +1,14 @@
 :root {
     --primary-theme-color: #20232a;
-    --secondary--theme-color: #282c34;
+    --secondary-theme-color: #282c34;
     --text-color: #fff;
-    --primary-shadow-color:#8888;
+    --primary-shadow-color: #8888;
     --secondary-shadow-color: #21242c80;
-    --shadow-color: #8888;
     --button-color: #61dafb;
     --button-color-active: #fff;
     --button-text-color: #000;
     --primary-highlight: #61dafb;
-    --secondary-hightlight: #ffd700;
+    --secondary-highlight: #ffd700;
     --padding-section: 2em 0;
     --padding-container: 0 2em;
     --max-width-container: 1024px;
@@ -18,9 +17,9 @@
 }
 
 .body {
-    background-color: var(--secondary--theme-color);
+    background-color: var(--secondary-theme-color);
     color: var(--text-color);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Roboto Mono', monospace;
     margin: 0;
     min-height: 200vh;
 }
@@ -34,7 +33,7 @@
 }
 
 .header-nav {
-    padding: 0.5rem 0;
+    padding: 0.5em 0;
 }
 
 .header-nav__container {
@@ -43,7 +42,7 @@
     justify-content: space-between;
     max-width: var(--max-width-container);
     margin: auto;
-    padding: var(--padding-container); 
+    padding: var(--padding-container);
 }
 
 .header-nav__link-logo-container {
@@ -56,7 +55,7 @@
 }
 
 .header-nav__link-logo-container:hover {
-    box-shadow: 
+    box-shadow:
     0 0 0.25rem 0 var(--primary-highlight),
     0 0 0.5rem 0 var(--primary-highlight);
 }
@@ -72,13 +71,13 @@
 }
 
 .header-nav__menu-icon-label:hover {
-    text-shadow: 
+    text-shadow:
     0 0 0.25rem var(--primary-highlight),
     0 0 0.5rem var(--primary-highlight);
 }
 
 .header-nav__menu-icon-checkbox {
-    display: none; 
+    display: none;
 }
 
 .header-nav__menu-icon-checkbox:checked+.header-nav__menu-link-list {
@@ -102,13 +101,15 @@
     list-style: none;
     transition: var(--all-transitions);
 }
+
 .header-nav__menu-link-item {
     display: flex;
 }
+
 .header-nav__menu-link {
     position: relative;
     color: var(--text-color);
-    font-weight: bold;
+    font-weight: 600;
     text-decoration: none;
     transition: var(--all-transitions);
 }
@@ -125,8 +126,8 @@
     bottom: -0.125rem;
     width: 0;
     height: 0.0625rem;
-    background-color: var(--secondary-hightlight);
-    transition: var(--all-transition);
+    background-color: var(--secondary-highlight);
+    transition: var(--all-transitions);
 }
 
 .header-nav__menu-link:hover::after,
@@ -135,16 +136,20 @@
 }
 
 @media (min-width: 854px) {
+    :root {
+    --padding-container: 0 0.75em;
+    }
+
     .header-nav__menu-icon-label {
-        display: none;
+    display: none;
     }
 
     .header-nav__menu-link-list {
-        position: static;
-        width: auto;
-        flex-direction: row;
-        gap: 1.5rem;
-        list-style: none;
-        background-color: transparent;
+    position: static;
+    width: auto;
+    flex-direction: row;
+    gap: 1.5rem;
+    list-style: none;
+    background-color: transparent;
     }
 }
