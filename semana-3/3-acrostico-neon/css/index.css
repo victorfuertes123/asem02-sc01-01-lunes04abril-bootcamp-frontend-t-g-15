@@ -72,10 +72,23 @@
     color: var(--letter-color-6);
 }
 
+.cover__name-letter::before {
+    content: var(--letter);
+    position: absolute;
+    transform: scale(1.125);
+    filter: blur(1rem);
+}
 .cover__name-letter::after {
     content: var(--letter);
     position: absolute;
     top: 75%;
     left: 0;
     filter: blur(0.25rem);
+    transform: rotateX(125deg);
+}
+
+@media (min-width: 854px) { 
+    .cover__name {
+        font-size: 8rem;
+    }
 }
