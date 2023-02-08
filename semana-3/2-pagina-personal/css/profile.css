@@ -17,6 +17,16 @@
     --all-transitions: all 0.25s;
 }
 
+@keyframes tech-jump {
+    0% {
+        margin-top: 0;
+    }
+
+    100% {
+        margin-top: 1rem;
+    }
+} 
+
 .profile {
     background-image: url(https://i.postimg.cc/NjBrc0Xd/programacion-logo.jpg);
     background-size: cover;
@@ -25,8 +35,6 @@
 }
 .profile__container {
     display: grid;
-    grid-template-columns: 1fr;
-    justify-items: center;
     gap: 2rem;
     max-width: var(--max-width-container);
     margin: auto;
@@ -39,10 +47,22 @@
     gap: 1rem;
     background-color: var(--secondary-shadow-color);
     border-radius: var(--border-radius);
+    box-shadow: 
+        0 0 0 0.125rem var(--primary-shadow-color),
+        0 0 0 0.125rem var(--primary-shadow-color);
     padding: 1rem;
-    box-sizing: border-box;
     text-align: center;
+    transition: var(--all-transitions);
 }
+
+.profile__info:hover {
+    box-shadow: 
+        0 0 0 0.125rem var(--primary-highlight-color),
+        0 0 0 0.25rem var(--primary-highlight-color),
+        0 0 0.5 0 var(--secondary-highlight-color),
+        0 0 0.75 0 var(--secondary-highlight-color);
+}
+
 .profile__info-title {
     font-size: 1.125rem;
     margin: 0;
@@ -75,7 +95,9 @@
 }
 .profile__info-link--active {}
 
-.profile__figure {}
+.profile__figure {
+    background-color: white;
+}
 
 .profile__figure-image-container {
     position: relative;
@@ -85,7 +107,14 @@
 }
 .profile__figure-image {
     border-radius: 50%;
-    width: 100%;    
+    width: 100%;
+    transition: var(--all-transitions);    
+}
+
+.profile__figure-image:hover {
+    box-shadow:
+    0 0 0.125rem 0 var(--primary-highlight-color),
+    0 0 0.125rem 0 var(--primary-highlight-color);     
 }
 .profile__figure-tech-one {
     position: absolute;
@@ -93,6 +122,8 @@
     top: 100%;
     left: 50%;
     transform: translate(-50%, -50%);
+    animation: tech-jump 1s ease-in-out -1s infinite alternate;
+    pointer-events: none;
 }
 .profile__figure-tech-two {
     position: absolute;
@@ -100,6 +131,8 @@
     top: 50%;
     left: 0;
     transform: translate(-50%, -50%);
+    animation: tech-jump 1s ease-in-out -0.75s infinite alternate;
+    pointer-events: none;
 }
 .profile__figure-tech-tree {
     position: absolute;
@@ -107,6 +140,8 @@
     top: 50%;
     left: 100%;
     transform: translate(-50%, -50%);
+    animation: tech-jump 1s ease-in-out -0.5s infinite alternate;
+    pointer-events: none;
 }
 .profile__figure-tech-four {
     position: absolute;
@@ -114,4 +149,6 @@
     top: 0;
     left: 50%;
     transform: translate(-50%, -50%);
+    animation: tech-jump 1s ease-in-out -0.25s infinite alternate;
+    pointer-events: none;
 }

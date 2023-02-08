@@ -22,9 +22,10 @@
 
 .body {
   background-color: var(--secondary-theme-color);
-    color: var(--text-color);
+  color: var(--text-color);
   font-family: 'Roboto Mono', monospace;
   margin: 0;
+  min-height: 200vh;
 }
 
 main {
