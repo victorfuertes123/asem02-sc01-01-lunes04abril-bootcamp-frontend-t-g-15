@@ -1,0 +1,97 @@
+:root {
+    scroll-behavior: smooth;
+    --primary-theme-color: #20232a;
+    --secondary-theme-color: #282c34;
+    --text-color: #fff;
+    --primary-shadow-color: #8888;
+    --secondary-shadow-color: #21242c80;
+    --button-color: #61dafb;
+    --button-color-active: #fff;
+    --button-text-color: #000;
+    --primary-highlight-color: #61dafb;
+    --secondary-highlight-color: #ffd700;
+    --padding-section: 4rem 0;
+    --padding-container: 0 2rem;
+    --max-width-container: 1024px;
+    --border-radius: 0.5rem;
+    --all-transitions: all 0.25s;
+}
+
+.profile {
+    background-image: url(https://i.postimg.cc/NjBrc0Xd/programacion-logo.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+.profile__container {
+    display: flex;
+    flex-direction: column;
+    max-width: var(--max-width-container);
+    margin: auto;
+    padding: var(--padding-container);
+}
+
+.profile__info {
+    text-align: center;
+}
+.profile__info-title {
+    margin: 0;
+}
+.profile__info-subtitle {
+    margin: 0;
+}
+.profile__info-description {
+    display: none;
+}
+.profile__info-link-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;    
+}
+.profile__info-link {
+    background-color: var(--button-color);
+    border-radius: var(--border-radius);
+    color: var(--button-text-color);
+    font-weight: 700;
+    padding: 0.5em 1.5em;
+    text-decoration: none;
+}
+.profile__info-link--active {}
+
+.profile__figure {}
+
+.profile__figure-image-container {
+    position: relative;
+    display: flex;
+    max-width: 256px;
+    margin: 0;
+}
+.profile__figure-image {
+    border-radius: 50%;
+    width: 100%;    
+}
+.profile__figure-tech-one {
+    position: absolute;
+    width: 25%;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50% -50%);
+}
+.profile__figure-tech-two {
+    position: absolute;
+    width: 25%;
+    left: 0;
+    bottom: 0;
+}
+.profile__figure-tech-tree {
+    position: absolute;
+    width: 25%;
+    top: 0;
+    right: 0;
+}
+.profile__figure-tech-four {
+    position: absolute;
+    width: 25%;
+    top: 0;
+    left: 0;
+}
