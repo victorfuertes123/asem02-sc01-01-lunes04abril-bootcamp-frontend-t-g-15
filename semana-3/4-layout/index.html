@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+        :root {
+            --bg-color-1: #00bef8;
+            --bg-color-2: #ff0697;
+            --bg-color-3: #ff4d00;
+            --bg-color-4: #ffe600;
+            --bg-color-5: #bb00ff;
+            --bg-color-6: #f5926b;
+        }
+
+        .body {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-auto-rows: 1fr;
+            grid-template-areas:
+                "header header"
+                "article aside"
+                "footer footer";
+            background-color: var(--bg-color-1);
+            min-height: 100vh;
+            margin: 0;
+        }
+        .header {
+            background-color: var(--bg-color-2);
+            grid-area: header;
+        }
+        .article {
+            background-color: var(--bg-color-4);
+            grid-area: article;
+        }
+        .aside {
+            background-color: var(--bg-color-5);
+            grid-area: aside;
+        }
+        .footer {
+            background-color: var(--bg-color-6);
+            grid-area: footer;
+        }
+
+    </style>
+</head>
+
+<body class="body">
+    <header class="header">Header</header>
+        <article class="article">Article</article>
+        <aside class="aside">Aside</aside>
+    <footer class="footer">Footer</footer>    
+</body>
+</html>
