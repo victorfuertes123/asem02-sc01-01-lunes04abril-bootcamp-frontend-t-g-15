@@ -30,6 +30,7 @@
 
 main {
   width: 100%;
+  min-height: 200vh;
 }
 
 @media (min-width: 854px) {
