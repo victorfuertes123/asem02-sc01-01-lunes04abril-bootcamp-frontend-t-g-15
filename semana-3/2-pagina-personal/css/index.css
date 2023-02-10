@@ -33,6 +33,16 @@ main {
   min-height: 200vh;
 }
 
+.wave-separator {
+  width: 100%;
+}
+.wave-separator-container {
+  margin: 0;
+}
+.wave-separator__wave {
+  
+}
+
 @media (min-width: 854px) {
   :root {
     --padding-container: 0 0.75em;
