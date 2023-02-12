@@ -41,7 +41,11 @@ main {
   margin: 0;
 }
 .wave-separator__wave {
-  
+  width: 100%;  
+}
+
+.wave-separator--r-180 {
+  transform: rotate(180deg);
 }
 
 @media (min-width: 854px) {
