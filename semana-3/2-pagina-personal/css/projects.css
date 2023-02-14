@@ -99,6 +99,7 @@
     justify-content: center;
     gap: 1rem;
     padding: 0 1rem 1rem;
+    margin-top: auto;
 }
 .projects__item-button {
     font-weight: 700;
@@ -118,4 +119,10 @@
 
 .projects__item-button:hover {
     background-color: var(--button-color-active);
+}
+
+@media (min-width: 854px) {
+    .projects__projects-list {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
