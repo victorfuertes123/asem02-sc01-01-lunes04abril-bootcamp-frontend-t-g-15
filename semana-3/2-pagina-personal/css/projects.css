@@ -45,8 +45,22 @@
     flex-direction: column;
     gap: 1.5rem;
     background-color: var(--secondary-theme-color);
-    border: 6px solid white;
+    border-radius: var(--border-radius);
+    box-shadow:
+        0 0 0.125rem var(--primary-shadow-color),
+        0 0 0.25rem var(--primary-shadow-color);
+    overflow: hidden;
+    transition: var(--all-transitions);
 }
+
+.projects__projects-item:hover {
+    box-shadow:
+        0 0 0 0.25rem var(--primary-highlight-color),
+        0 0 0.5rem 0 var(--secondary-highlight-color),
+        0 0 0.75rem 0 var(--secondary-highlight-color);
+    transform: scale(1.05);
+}
+
 .projects__item-image-container {
     display: flex;
     width: 100%;
@@ -65,12 +79,16 @@
 }
 
 .projects__item-data-title {
+    text-shadow: 0 0 0.125rem var(--primary-highlight-color);
     margin: 0;
 }
 .projects__item-data-core-technology {
+    font-weight: 500;
     margin: 0;
 }
 .projects__item-data-technologies {
+    text-shadow: 0 0 0.125rem var(--primary-highlight-color);
+    font-weight: 300;
     margin: 0;
 }
 .projects__item-data-about {
@@ -90,5 +108,14 @@
     padding: 0.5em 1em;
     color: var(--button-text-color);
     text-decoration: none;
+    transition: var(--all-transitions);
 }
-.projects__item-button {}
+
+.projects__item-button--bg-gold {
+    background-color: var(--secondary-highlight-color);
+    border: 0.0625rem solid var(--secondary-highlight-color);
+}
+
+.projects__item-button:hover {
+    background-color: var(--button-color-active);
+}
